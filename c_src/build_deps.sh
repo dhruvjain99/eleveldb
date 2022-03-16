@@ -52,7 +52,7 @@ case "$1" in
 
     get-deps)
         if [ ! -d leveldb ]; then
-            git clone git://github.com/basho/leveldb
+            git clone https://github.com/basho/leveldb
             (cd leveldb && git checkout $LEVELDB_VSN && \
                     curl -fSL https://patch-diff.githubusercontent.com/raw/ioolkos/leveldb/pull/1.diff -o 1.diff && \
                     patch -p1 -i 1.diff && \
@@ -70,7 +70,7 @@ case "$1" in
         export LEVELDB_VSN="$LEVELDB_VSN"
 
         if [ ! -d leveldb ]; then
-            git clone git://github.com/basho/leveldb
+            git clone https://github.com/basho/leveldb
             (cd leveldb && git checkout $LEVELDB_VSN && \
                     curl -fSL https://patch-diff.githubusercontent.com/raw/ioolkos/leveldb/pull/1.diff -o 1.diff && \
                     patch -p1 -i 1.diff && \
